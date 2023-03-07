@@ -1,7 +1,6 @@
 ---
 - name: Configure your gitlab instance
   hosts: all
-  # any_errors_fatal: false
   become: yes
   gather_facts: true
   roles:
