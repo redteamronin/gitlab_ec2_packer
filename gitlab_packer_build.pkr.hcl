@@ -19,7 +19,7 @@ variable "gitlab-url" {
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
 source "amazon-ebs" "gitlab" {
-  ami_name      = "gitlab-ubuntu-${local.timestamp}"
+  ami_name      = "gitlab-debian-${local.timestamp}"
   instance_type = "t2.medium"
   region        = "${var.region}"
   source_ami_filter {
